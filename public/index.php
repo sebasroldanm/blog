@@ -1,6 +1,6 @@
 <?php
 
-die($_SERVER['REQUEST_URI']);
+//die($_SERVER['REQUEST_URI']);
 
 
 define('LARAVEL_START', microtime(true));
