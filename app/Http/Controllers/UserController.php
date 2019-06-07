@@ -8,15 +8,15 @@ class UserController extends Controller
 {
     public function index()
     {
-    	$users = [
-            'Juan|',
-            'Carlos',
-            'Pedro',
-            'Jazmin',
-            'Bryan',
-            'Andres',
-            '<php>'
-        ];
+        if(request()->has('empty')){
+            $users = [];
+        }
+        else{
+            $users = [
+            'Juan|','Carlos','Pedro','Jazmin','Bryan','Andres',
+            ];
+        }
+    	
 
         $title = 'Listado de usuarios';
 
