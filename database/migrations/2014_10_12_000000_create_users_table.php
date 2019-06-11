@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
 
-            $table->integer('description_id')->unsigned()->nullable();
+            $table->bigInteger('description_id')->unsigned()->nullable();
             $table->foreign('description_id')->references('id')->on('description');
 
             $table->string('email')->unique();
