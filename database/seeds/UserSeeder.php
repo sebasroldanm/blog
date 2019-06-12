@@ -12,9 +12,12 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+    	$id_description_query = DB::select('SELECT id FROM description WHERE title = ?', ['Creador']);
+
+
         DB::table('users')->insert([
         	'name' => 'Juan Carlos',
-        	'description_id' => '1',
+        	'description_id' => $id_description_query[0]->id,
         	'email' => 'juan@app.com',
         	'password' => bcrypt('123'),
         ]);
