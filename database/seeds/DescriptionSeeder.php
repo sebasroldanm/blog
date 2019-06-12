@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Description;        //Se agrego para solo llamar Description para el create
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -12,14 +13,19 @@ class DescriptionSeeder extends Seeder
      */
     public function run()
     {
+
+        // DB::table('description')->insert([
+        // 	'title' => 'Creador',
+        // ]);
+
+    	Description::create([
+    		'title' => 'Creador',
+    	]);
     	
-        DB::table('description')->insert([
-        	'title' => 'Creador',
-        ]);
-        DB::table('description')->insert([
+        Description::create([
         	'title' => 'Inovador',
         ]);
-        DB::table('description')->insert([
+        Description::create([
         	'title' => 'Empírico',
         ]);
     }

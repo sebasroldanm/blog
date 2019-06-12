@@ -13,7 +13,7 @@ class CreateDescriptionTable extends Migration
      */
     public function up()
     {
-        Schema::create('description', function (Blueprint $table) {
+        Schema::create('descriptions', function (Blueprint $table) {
             $table->bigIncrements('id');
 
             $table->string('title')->unique();
@@ -29,6 +29,6 @@ class CreateDescriptionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('description');
+        Schema::dropIfExists('descriptions');
     }
 }
