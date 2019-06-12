@@ -1,6 +1,7 @@
 <?php
 
-use App\User;
+use App\Models\User;
+use App\Models\Description;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -13,12 +14,12 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-    	$id_description_query = DB::select('SELECT id FROM descriptions WHERE title = ?', ['Creador']);
+    	$id_description_query = Description::where('title','Creador')->value('id');
 
 
         User::create([
         	'name' => 'Juan Carlos',
-        	'description_id' => $id_description_query[0]->id,
+        	'description_id' => $id_description_query,
         	'email' => 'juan@app.com',
         	'password' => bcrypt('123'),
         ]);
