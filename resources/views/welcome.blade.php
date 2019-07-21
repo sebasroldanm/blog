@@ -1,93 +1,153 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if (IE 9)]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
+<head>
 
-        <title>Blog</title>
+    <!-- Meta Tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <title>Blog Intitucional</title>   
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+    <meta name="description" content="Insert Your Site Description" /> 
 
-            .full-height {
-                height: 100vh;
-            }
+    <!-- Mobile Specifics -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="MobileOptimized" content="320"/>   
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+    <!-- Mobile Internet Explorer ClearType Technology -->
+    <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
 
-            .position-ref {
-                position: relative;
-            }
+    <!-- Bootstrap -->
+    <link href="{{ asset('_include/css/bootstrap.min.css')}}" rel="stylesheet">
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+    <!-- Main Style -->
+    <link href="{{ asset('_include/css/main.css')}}" rel="stylesheet">
 
-            .content {
-                text-align: center;
-            }
+    <!-- Supersized -->
+    <link href="{{ asset('_include/css/supersized.css')}}" rel="stylesheet">
+    <link href="{{ asset('_include/css/supersized.shutter.css')}}" rel="stylesheet">
 
-            .title {
-                font-size: 84px;
-            }
+    <!-- FancyBox -->
+    <link href="{{ asset('_include/css/fancybox/jquery.fancybox.css')}}" rel="stylesheet">
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+    <!-- Font Icons -->
+    <link href="{{ asset('_include/css/fonts.css')}}" rel="stylesheet">
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Inicio</a>
-                    @else
-                        <a href="{{ route('login') }}">Iniciar Sesión</a>
+    <!-- Shortcodes -->
+    <link href="{{ asset('_include/css/shortcodes.css')}}" rel="stylesheet">
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Registrarse</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+    <!-- Responsive -->
+    <link href="{{ asset('_include/css/bootstrap-responsive.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('_include/css/responsive.css')}}" rel="stylesheet">
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Blog Institucional
-                </div>
+    <!-- Supersized -->
+    <link href="{{ asset('_include/css/supersized.css')}}" rel="stylesheet">
+    <link href="{{ asset('_include/css/supersized.shutter.css')}}" rel="stylesheet">
 
-                <div class="links">
-                    
-                </div>
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
+
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="#">
+
+    <link rel="apple-touch-icon" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="144x144" href="#">
+
+    <!-- Modernizr -->
+    <script src="{{ asset('_include/js/modernizr.js')}}"></script>
+
+    <!-- Analytics -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'Insert Your Code']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<!-- End Analytics -->
+
+</head>
+
+
+<body>
+
+
+
+    <!-- This section is for Splash Screen -->
+    <div class="ole">
+        <section id="jSplash">
+            <div id="circle"></div>
+        </section>
+    </div>
+    <!-- End of Splash Screen -->
+
+    <!-- Header -->
+    <header>
+        <div class="sticky-nav">
+            <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
+            
+            <div id="logo">
+                <a id="goUp" href="#home-slider" title="Blog Institucional">Blog Institucional</a>
             </div>
+            
+            <nav id="menu">
+                <ul id="menu-nav">
+                    <li class="current"><a href="{{ url('/home') }}">Inicio</a></li>
+                    <li><a href="{{ route('login') }}">Iniciar Sesión</a></li>
+                    <!--<li><a href="#about">Sobre Mí</a></li>-->
+                    <li><a href="{{ route('register') }}">Registrarse</a></li>
+                    <!--<li><a href="shortcodes.html" class="external">Shortcodes</a></li>-->
+                </ul>
+            </nav>
+            
         </div>
-    </body>
+    </header>
+    <!-- End Header -->
+
+    <!-- Homepage Slider -->
+    <div id="home-slider">  
+        <div class="overlay"></div>
+
+        <div class="slider-text">
+            <div id="slidecaption"></div>
+            {{-- <div id="slider-text"><h1>Blog Institucional</h1></div> --}}
+        </div>   
+
+        <div class="control-nav">
+            <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
+            <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
+            <ul id="slide-list"></ul>
+
+            <a id="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a>
+        </div>
+    </div>
+    <!-- End Homepage Slider -->
+
+<!-- Js -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
+<script src="{{ asset('_include/js/bootstrap.min.js')}}"></script> <!-- Bootstrap -->
+<script src="{{ asset('_include/js/supersized.3.2.7.min.js')}}"></script> <!-- Slider -->
+<script src="{{ asset('_include/js/waypoints.js')}}"></script> <!-- WayPoints -->
+<script src="{{ asset('_include/js/waypoints-sticky.js')}}"></script> <!-- Waypoints for Header -->
+<script src="{{ asset('_include/js/jquery.isotope.js')}}"></script> <!-- Isotope Filter -->
+<script src="{{ asset('_include/js/jquery.fancybox.pack.js')}}"></script> <!-- Fancybox -->
+<script src="{{ asset('_include/js/jquery.fancybox-media.js')}}"></script> <!-- Fancybox for Media -->
+<script src="{{ asset('_include/js/jquery.tweet.js')}}"></script> <!-- Tweet -->
+<script src="{{ asset('_include/js/plugins.js')}}"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+<script src="{{ asset('_include/js/main.js')}}"></script> <!-- Default JS -->
+<!-- End Js -->
+
+</body>
 </html>

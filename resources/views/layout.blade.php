@@ -1,99 +1,88 @@
-<html lang="en" class="h-100">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  <title>@yield('title') - Blog</title>
+@extends('layouts.app')
 
-  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/">
+@section('title', "Login")
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+@section('content')
+
+{{-- <div class="jumbotron jumbotron-fluid"> --}}
+  <div class="row justify-content-center">
+    <div class="card">
+      <div id="logreg-forms">
+        <form class="form-signin" action="{{ route('login') }}">
+          @csrf
+
+          <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">{{ __('Inicio de Sesión')}}</h1>
+          <div class="social-login">
+            <div class="form-group">
+              <button class="btn btn-outline-primary" type="button"><span><i class="fab fa-facebook-f"></i> Ingresar con Facebook</span> </button>
+              <button class="btn btn-outline-danger" type="button"><span><i class="fab fa-google-plus-g"></i> Ingresar con Google+</span> </button>
+            </div>
+          </div>
+          
+          <p style="text-align:center"> Cuenta Asociada  </p>
+          <div class="form-group">
+            <span class="col-sm-3">{{ __('Correo')}}</span><br>
+            <input type="email" id="email" class="form-control" placeholder="{{ old('email')}}" required autocomplete="email" autofocus="">
+
+            @error('email')
+            <div class="alert alert-danger" role="alert">
+              <strong>{{ $message}}</strong>
+            </div>
+            @enderror
+
+            <br><span class="col-sm-3">{{ __('Contraseña')}}</span>
+            <input type="password" id="password" class="form-control" placeholder="" required autocomplete="current-password">
+
+            @error('password')
+            <div class="alert alert-danger" role="alert">
+              <strong>{{ $message}}</strong>
+            </div>
+            @enderror
+
+          </div>
 
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
+          <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> {{ __('Iniciar Sesión')}}</button>
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-  <!-- Custom styles for this template -->
-  <link href="sticky-footer-navbar.css" rel="stylesheet">
-</head>
-<body class="d-flex flex-column h-100">
-  <header>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Foro Institucional</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          {{-- <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li> --}}
-        </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <ul class="navbar-nav mr-auto">
-            <li>
-              <a class="nav-link" href="#">Iniciar Sesión</a>
-            </li>
-            <li>
-              {{-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> --}}
-              <a class="nav-link" href="#">Registrarse</a>
-            </li>
-          </ul>
-          {{-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> --}}
-          {{-- <li>
-            <a class="nav-link" href="#">Iniciar Sesión</a>
-          </li>
-          <li>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            <a class="nav-link" href="#">Registrarse</a>
-          </li> --}}
+          @if(Route::has('password.request'))
+          <a href="{{ route('password.request')}}" id="forgot_pswd">{{ __('¿Olvido su contraseña?')}}</a>
+          <hr>
+          @endif
+          <!-- <p>Don't have an account!</p>  -->
+          <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Ingresar con una nueva cuenta</button>
         </form>
+
+        {{-- <form action="/reset/password/" class="form-reset">
+          <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+          <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
+          <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
+        </form>
+
+        <form action="/signup/" class="form-signup">
+          <div class="social-login">
+            <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
+          </div>
+          <div class="social-login">
+            <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
+          </div>
+
+          <p style="text-align:center">OR</p>
+
+          <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="">
+          <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
+          <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
+          <input type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
+
+          <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+          <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+        </form> --}}
+        <br>
+
       </div>
-    </nav>
-  </header>
-  <div class="container">
-
-    <hr>
-    <hr>
-    <hr>
-    <hr>
-
-    @yield('content')
-
-  </div>
-
-  <footer class="footer mt-auto py-3">
-    <div class="container">
-      <span class="text-muted">&copy; 2019.</span>
     </div>
-  </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  </div>
+  <p style="text-align:center">
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  {{-- </div> --}}
 
-
-</body>
-</html>
+  @endsection

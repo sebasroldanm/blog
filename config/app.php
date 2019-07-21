@@ -177,6 +177,8 @@ return [
 
         Zizaco\Entrust\EntrustServiceProvider::class,
 
+        Barryvdh\Debugbar\ServiceProvider::class,
+
 
     ],
 
@@ -230,6 +232,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
 
     ],

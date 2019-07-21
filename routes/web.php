@@ -4,6 +4,10 @@ Route::get('/', function () {
     return view('Welcome');
 });
 
+Route::get('/layout', function () {
+    return view('layout');
+});
+
 Route::get('/usuario', 'UserController@index');
 
 Route::get('/usuario/{id}', 'UserController@show')->where('id', '[0-9]+');
