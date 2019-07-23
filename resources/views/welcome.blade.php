@@ -105,9 +105,9 @@
             <nav id="menu">
                 <ul id="menu-nav">
                     <li class="current"><a href="{{ url('/home') }}">Inicio</a></li>
-                    <li><a href="{{ url('login') }}">Iniciar Sesión</a></li>
+                    <li><a href="{{ route('/auth.login') }}">Iniciar Sesión</a></li>
                     <!--<li><a href="#about">Sobre Mí</a></li>-->
-                    <li><a href="{{ url('register') }}">Registrarse</a></li>
+                    <li><a href="{{ route('/auth.register') }}">Registrarse</a></li>
                     <!--<li><a href="shortcodes.html" class="external">Shortcodes</a></li>-->
                 </ul>
             </nav>
