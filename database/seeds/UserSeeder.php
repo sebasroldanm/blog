@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
         	'name' => 'Juan Carlos',
         	'description_id' => $id_description_query,
         	'email' => 'juan@app.com',
-        	'password' => bcrypt('123'),
+        	'password' => bcrypt('123456'),
         ]);
     }
 }

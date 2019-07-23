@@ -9,7 +9,7 @@
     <!-- Meta Tags -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <title>Blog Intitucional</title>   
+    <title>Blog Institucional</title>   
 
     <meta name="description" content="Insert Your Site Description" /> 
 
