@@ -1,4 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.metronic')
+
+@section('title', "Inicio")
+
+@section('url')
+{{-- <i class="fa fa-angle-right"></i> --}}
+@endsection
 
 @section('content')
 <div class="container">

@@ -103,7 +103,7 @@
             
 
             <div id="logo">
-                <a href={{ url('/layaout') }} >Layaout</a>
+                <a href={{ url('/layout') }} >Layout</a>
             </div>
 
             <nav id="menu">
