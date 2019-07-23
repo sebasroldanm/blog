@@ -110,7 +110,6 @@
 
                 <a href="{{ url('/') }}">Inicio</a>
                 <a href="{{ route('login') }}">Iniciar Sesión</a>
-                <a href="#about">Sobre Mí</a>
                 <a href="{{ route('register') }}">Registrarse</a>
 
             </nav>
