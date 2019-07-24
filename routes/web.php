@@ -5,7 +5,7 @@ Route::get('/', function () {
 });
 
 Route::get('/layout', function () {
-    return view('layouts.metronic');
+    return view('layout');
 });
 
 Route::get('/usuario', 'UserController@index');

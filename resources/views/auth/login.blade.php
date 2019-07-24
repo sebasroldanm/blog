@@ -9,7 +9,7 @@
   <div class="card" style="width: 28rem;">
     <div id="logreg-forms">
       <form class="form-signin" method="POST" action="{{ route('login') }}">
-        @csrf
+        {{ csrf_field() }}
         <div class="form-group">
           <div class=" form-group col-md-12">
             <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">{{ __('Inicio de Sesión')}}</h1>

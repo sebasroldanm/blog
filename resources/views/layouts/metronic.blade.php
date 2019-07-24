@@ -77,7 +77,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- END RESPONSIVE MENU TOGGLER -->
             <!-- BEGIN PAGE ACTIONS -->
             <!-- DOC: Remove "hide" class to enable the page header actions -->
-            <div class="page-actions">
+            {{-- <div class="page-actions">
                 <div class="btn-group">
                     <button type="button" class="btn btn-circle btn-outline red dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-plus"></i>&nbsp;
@@ -112,7 +112,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> --}}
             <!-- END PAGE ACTIONS -->
             <!-- BEGIN PAGE TOP -->
             <div class="page-top">
@@ -457,7 +457,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <ul class="dropdown-menu dropdown-menu-default">
                                 <li>
                                     <a href="page_user_profile_1.html">
-                                        <i class="icon-user"></i> My Profile </a>
+                                        <i class="icon-user"></i> {{ __('Mi Cuenta')}} </a>
                                 </li>
                                 <li>
                                     <a href="app_calendar.html">
@@ -495,10 +495,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!-- END USER LOGIN DROPDOWN -->
                         <!-- BEGIN QUICK SIDEBAR TOGGLER -->
                         <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                        <li class="dropdown dropdown-extended quick-sidebar-toggler">
+                        {{-- <li class="dropdown dropdown-extended quick-sidebar-toggler">
                             <span class="sr-only">Toggle Quick Sidebar</span>
                             <i class="icon-logout"></i>
-                        </li>
+                        </li> --}}
                         <!-- END QUICK SIDEBAR TOGGLER -->
                     </ul>
                 </div>
@@ -1752,7 +1752,7 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
         <!-- END CONTENT -->
         <!-- BEGIN QUICK SIDEBAR -->
-        <a href="javascript:;" class="page-quick-sidebar-toggler">
+        {{-- <a href="javascript:;" class="page-quick-sidebar-toggler">
             <i class="icon-login"></i>
         </a>
         <div class="page-quick-sidebar-wrapper" data-close-on-body-click="false">
@@ -2334,7 +2334,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- END QUICK SIDEBAR -->
     </div>
     <!-- END CONTAINER -->
@@ -2387,11 +2387,6 @@ License: You must have a valid license purchased only from themeforest(the above
         </nav> --}}
         <div class="quick-nav-overlay"></div>
         <!-- END QUICK NAV -->
-        <!--[if lt IE 9]>
-<script src="../assets/global/plugins/respond.min.js"></script>
-<script src="../assets/global/plugins/excanvas.min.js"></script> 
-<script src="../assets/global/plugins/ie8.fix.min.js"></script> 
-<![endif]-->
         <!-- BEGIN CORE PLUGINS -->
         <script src="{{ asset('assets/global/plugins/jquery.min.j')}}s" type="text/javascript"></script>
         <script src="{{ asset('assets/global/plugins/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
@@ -2420,6 +2415,8 @@ License: You must have a valid license purchased only from themeforest(the above
                     });
                 })
         </script>
+    </div>
+
 </body>
 
 </html>
