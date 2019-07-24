@@ -481,8 +481,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <i class="icon-lock"></i> Lock Screen </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('logout') }}">
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
                                         <i class="icon-key"></i> {{ __('Cerrar Sesión') }} </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                        style="display: none;">
+                                        @csrf
+                                    </form>
                                 </li>
                             </ul>
                         </li>
@@ -1704,7 +1710,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="{{ url('/home') }}">{{ __('Inicio')}}</a>
                             @yield('url')
                         </li>
-                        
+
                     </ul>
                     <div class="page-toolbar">
                         <div class="btn-group pull-right">
