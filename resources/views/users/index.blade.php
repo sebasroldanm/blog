@@ -3,7 +3,8 @@
 @section('title', "Usuarios")
 
 @section('url')
-{{-- <i class="fa fa-angle-right"></i>--}}
+ <i class="fa fa-angle-right"></i>
+ {{ __('Lista de Usuarios')}}
 @endsection
 
 @section('content')
@@ -66,24 +67,24 @@
 				</tr>
 			</thead>
 			<tbody>
-				@forelse ($users as $user)
+				@forelse (array_combine($users, $names) as $user => $name)
 				<tr>
 					<td>
 						{{ $user }}
 					
 					</td>
 					<td>
-						{{ $name_full}}
+						{{ $name}}
 					</td>
 					<td>
-						{{ $user}}
+						3
 					</td>
-					<td class="center"> {{ $user}} </td>
+					<td class="center"> Na. </td>
 					<td>
-						<a class="edit" href="javascript:;"> Edit </a>
+						<a class="edit" href="javascript:;"> {{ _('Editar')}} </a>
 					</td>
 					<td>
-						<a class="delete" href="javascript:;"> Delete </a>
+						<a class="delete" href="javascript:;"> {{ __('Eliminar')}} </a>
 					</td>
 				</tr>
 					

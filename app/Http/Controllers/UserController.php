@@ -14,15 +14,18 @@ class UserController extends Controller
             $users = [
                 'Juan', 'Carlos', 'Pedro', 'Jazmin', 'Bryan', 'Andres',
             ];
-            $name_full = [
+            $names = [
                 'Juan Preciado', 'Carlos Camelo', 'Pedro Bristas', 'Jazmin Urquijo', 'Bryan Martinez', 'Andres Cardenas',
+            ];
+            $points = [
+                '3.4', '4', '4.8', '2', '3', '4.9',
             ];
         }
 
 
         $title = 'Listado de usuarios';
 
-        return view('users.index', compact('title', 'users', 'name_full'));
+        return view('users.index', compact('title', 'users', 'names'));
     }
 
     public function show($id)
