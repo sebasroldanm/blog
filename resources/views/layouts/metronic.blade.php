@@ -531,22 +531,16 @@ License: You must have a valid license purchased only from themeforest(the above
                     data-slide-speed="200">
                     <li class="nav-item start ">
                         <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-home"></i>
+                            <i class="icon-user"></i>
                             <span class="title">{{__('Administracion de Usuarios')}}</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item start ">
-                                <a href="index.html" class="nav-link ">
-                                    <i class="icon-bar-chart"></i>
-                                    <span class="title"></span>
-                                </a>
-                            </li>
-                            <li class="nav-item start ">
                             <a href="{{ route('usuarios')}}" class="nav-link ">
-                                    <i class="icon-bulb"></i>
+                                    <i class="icon-users"></i>
                                 <span class="title">{{ _('Usuarios')}}</span>
-                                    <span class="badge badge-success">1</span>
+                                    {{-- <span class="badge badge-success">1</span> --}}
                                 </a>
                             </li>
                             <li class="nav-item start ">
@@ -560,8 +554,8 @@ License: You must have a valid license purchased only from themeforest(the above
                     </li>
                     <li class="nav-item  ">
                         <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-diamond"></i>
-                            <span class="title">UI Features</span>
+                            <i class="fa fa-commenting"></i>
+                            <span class="title">{{ __('Post')}}</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
@@ -1299,7 +1293,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     </li>
                     <li class="nav-item  ">
                         <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-user"></i>
+                            <i class="icon-home"></i>
                             <span class="title">User</span>
                             <span class="arrow"></span>
                         </a>
