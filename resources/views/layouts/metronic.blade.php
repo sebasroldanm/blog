@@ -56,24 +56,21 @@ License: You must have a valid license purchased only from themeforest(the above
 </head>
 <!-- END HEAD -->
 
-<body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-fixed page-md">
+<body class="page-header-fixed page-container-bg-solid page-sidebar-fixed page-md">
     <!-- BEGIN HEADER -->
     <div class="page-header navbar navbar-fixed-top">
         <!-- BEGIN HEADER INNER -->
         <div class="page-header-inner ">
             <!-- BEGIN LOGO -->
             <div class="page-logo">
-                <a href="index.html">
-                    <img src="{{ asset('assets/layouts/layout2/img/logo-default.png')}}" alt="logo"
-                        class="logo-default" /> </a>
-                <div class="menu-toggler sidebar-toggler">
-                    <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
-                </div>
+                <a href="{{ route('home')}}">
+                    <img src="{{ asset('assets/layouts/layout2/img/logo-udec.png')}}" alt="logo" width="100%"
+                        height="100%" /> </a>
+
             </div>
             <!-- END LOGO -->
             <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
-                data-target=".navbar-collapse"> </a>
+
             <!-- END RESPONSIVE MENU TOGGLER -->
             <!-- BEGIN PAGE ACTIONS -->
             <!-- DOC: Remove "hide" class to enable the page header actions -->
@@ -537,9 +534,9 @@ License: You must have a valid license purchased only from themeforest(the above
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item start ">
-                            <a href="{{ route('usuarios')}}" class="nav-link ">
+                                <a href="{{ route('usuarios')}}" class="nav-link ">
                                     <i class="icon-users"></i>
-                                <span class="title">{{ _('Usuarios')}}</span>
+                                    <span class="title">{{ _('Usuarios')}}</span>
                                     {{-- <span class="badge badge-success">1</span> --}}
                                 </a>
                             </li>
@@ -568,7 +565,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <a href="ui_colors.html" class="nav-link ">
                                     <span class="title">Color Library</span>
                                 </a>
-                            </li>
+                                {{-- </li>
                             <li class="nav-item  ">
                                 <a href="ui_general.html" class="nav-link ">
                                     <span class="title">General Components</span>
@@ -712,10 +709,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <a href="ui_nestable.html" class="nav-link ">
                                     <span class="title">Nestable List</span>
                                 </a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </li>
-                    <li class="nav-item  ">
+                    {{-- <li class="nav-item  ">
                         <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-puzzle"></i>
                             <span class="title">Components</span>
@@ -1598,7 +1595,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <i class="icon-bar-chart"></i> Item 3 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
                 </ul>
                 <!-- END SIDEBAR MENU -->
             </div>

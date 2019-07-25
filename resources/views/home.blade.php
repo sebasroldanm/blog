@@ -14,6 +14,6 @@
     </div>
     @endif
 
-You are logged in!
+Has iniciado sesión!
 
 @endsection
