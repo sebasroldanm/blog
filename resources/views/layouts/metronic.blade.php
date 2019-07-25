@@ -543,7 +543,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <li class="nav-item start ">
                                 <a href="dashboard_3.html" class="nav-link ">
                                     <i class="icon-graph"></i>
-                                    <span class="title">Dashboard 3</span>
+                                    <span class="title">Administracion de Roles</span>
                                     <span class="badge badge-danger">5</span>
                                 </a>
                             </li>
@@ -557,13 +557,13 @@ License: You must have a valid license purchased only from themeforest(the above
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item  ">
-                                <a href="ui_metronic_grid.html" class="nav-link ">
-                                    <span class="title">Metronic Grid System</span>
+                                <a href=" {{ route('post.index')}} " class="nav-link ">
+                                    <span class="title">{{ __('Ver Post')}}</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
                                 <a href="ui_colors.html" class="nav-link ">
-                                    <span class="title">Color Library</span>
+                                    <span class="title">Tipos de Roles</span>
                                 </a>
                                 {{-- </li>
                             <li class="nav-item  ">
