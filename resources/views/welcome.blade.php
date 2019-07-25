@@ -4,7 +4,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if (IE 9)]><html class="no-js ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en-US">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <!--<![endif]-->
 
 <head>
@@ -84,21 +84,22 @@
 
     <!-- Estilo del Boton -->
     <style type="text/css">
-        .boton_personalizado{
-          text-decoration: none;
-          padding: 17px;
-          font-weight: 550;
-          font-size: 20px;
-          color: #ffffff;
-          background-color: #26292E;
-          border-radius: 6px;
-          border: 2px solid #26292E;
+        .boton_personalizado {
+            text-decoration: none;
+            padding: 17px;
+            font-weight: 550;
+            font-size: 20px;
+            color: #ffffff;
+            background-color: #26292E;
+            border-radius: 6px;
+            border: 2px solid #26292E;
         }
-        .boton_personalizado:hover{
-          color: #ffffff;
-          background-color: #26292E;
+
+        .boton_personalizado:hover {
+            color: #ffffff;
+            background-color: #26292E;
         }
-      </style>
+    </style>
     <!-- Fin Estilo del Boton -->
 
 </head>
