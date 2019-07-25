@@ -50,12 +50,32 @@
     <!-- Custom styles for this template -->
     <link href="sticky-footer-navbar.css" rel="stylesheet">
 
+    <!-- Estilo del Boton -->
+    <style type="text/css">
+        .boton_personalizado{
+          text-decoration: none;
+          padding: 1px;
+          font-weight: 550;
+          font-size: 20px;
+          color: #ffffff;
+          background-color: #343A40;
+          border-radius: 6px;
+          border: 2px solid #343A40;
+        }
+        .boton_personalizado:hover{
+          color: #ffffff;
+          background-color: #343A40;
+        }
+      </style>
+    <!-- Fin Estilo del Boton -->
+
 
 </head>
 
 <body class="d-flex flex-column h-100">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="{{ url('/') }}">Blog Institucional</a>
+        <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('_include/img/logo.png')}}" width="100%"
+            height="100%" /> </a></a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
 
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -75,11 +95,11 @@
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}"><button class="boton_personalizado">{{ __('Iniciar Sesión') }}</button></a>
                         </li>
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}"><button class="boton_personalizado">{{ __('Registrarse') }}</button></a>
                         </li>
                         @endif
                         @else

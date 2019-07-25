@@ -82,6 +82,25 @@
     </script>
     <!-- End Analytics -->
 
+    <!-- Estilo del Boton -->
+    <style type="text/css">
+        .boton_personalizado{
+          text-decoration: none;
+          padding: 17px;
+          font-weight: 550;
+          font-size: 20px;
+          color: #ffffff;
+          background-color: #26292E;
+          border-radius: 6px;
+          border: 2px solid #26292E;
+        }
+        .boton_personalizado:hover{
+          color: #ffffff;
+          background-color: #26292E;
+        }
+      </style>
+    <!-- Fin Estilo del Boton -->
+
 </head>
 
 
@@ -100,37 +119,15 @@
     <!-- Header -->
     <header>
         <div class="sticky-nav">
-            
-
             <div id="logo">
-                <a href={{ url('/layout') }} >Layout</a>
+                <a href={{ url('/layout') }}>Layout</a>
             </div>
-
             <nav id="menu">
-
-                <a href="{{ url('/') }}">Inicio</a>
-                <a href="{{ route('login') }}">Iniciar Sesión</a>
-                <a href="{{ route('register') }}">Registrarse</a>
-
+                <a href="{{ url('/') }}"><button class="boton_personalizado">Inicio</button></a>
+                <a href="{{ route('login') }}"><button class="boton_personalizado">Iniciar Sesión</button></a>
+                <a href="{{ route('register') }}"><button class="boton_personalizado">Registrarse</button></a>
             </nav>
         </div>
-
-        {{-- <div class="flex-center position-ref full-height">
-                @if (Route::has('login'))
-                    <div class="top-right links">
-                        @auth
-                            <a href="{{ url('/home') }}">Home</a>
-        @else
-        <a href="{{ route('login') }}">Login</a>
-
-        @if (Route::has('register'))
-        <a href="{{ route('register') }}">Register</a>
-        @endif
-        @endauth
-        </div>
-        @endif
-        </div> --}}
-
     </header>
     <!-- End Header -->
 
@@ -140,7 +137,9 @@
 
         <div class="slider-text">
             <div id="slidecaption"></div>
-            {{-- <div id="slider-text"><h1>Blog Institucional</h1></div> --}}
+            <div id="slider-text">
+                <h1>Generación Siglo XXI</h1>
+            </div>
         </div>
 
         <div class="control-nav">

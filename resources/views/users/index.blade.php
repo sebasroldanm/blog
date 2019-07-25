@@ -3,8 +3,8 @@
 @section('title', "Usuarios")
 
 @section('url')
- <i class="fa fa-angle-right"></i>
- {{ __('Lista de Usuarios')}}
+<i class="fa fa-angle-right"></i>
+{{ __('Lista de Usuarios')}}
 @endsection
 
 @section('content')
@@ -71,7 +71,7 @@
 				<tr>
 					<td>
 						{{ $user }}
-					
+
 					</td>
 					<td>
 						{{ $name}}
@@ -87,7 +87,7 @@
 						<a class="delete" href="javascript:;"> {{ __('Eliminar')}} </a>
 					</td>
 				</tr>
-					
+
 				@empty
 
 				No hay usuarios disponibles
