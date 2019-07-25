@@ -1,6 +1,10 @@
-@extends('layout')
+@extends('layouts.metronic')
 
-@section('title', "Usuario {$id}")
+@section('title', "Detalle")
+
+@section('url')
+{{-- <i class="fa fa-angle-right"></i>--}}
+@endsection
 
 @section('content')
 

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Inicio</title>
 </head>
+
 <body>
-	
+
 	<h1>{{ $title }}</h1>
 
 	<hr>
@@ -13,15 +15,16 @@
 
 		@forelse ($users as $user)
 
-			<li>{{ $user }}</li>
+		<li>{{ $user }}</li>
 
 		@empty
 
-			<li>No hay usuarios disponibles</li>
+		<li>No hay usuarios disponibles</li>
 
 		@endforelse
 
 	</ul>
 
 </body>
+
 </html>
