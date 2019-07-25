@@ -14,6 +14,6 @@
     </div>
     @endif
 
-You are logged in!
+{{ __('You are logged in!')}}
 
 @endsection
