@@ -28,7 +28,7 @@ El proyecto esta desarrollado en [Laravel 5.8](https://laravel.com/docs/5.8/)
 
 ```sh
 "Los puntos con simbolo ($) son comandos desde consola
- ubicado en la ruta del proyecto (C:\xampp\htdocs\Siaaf)"
+ ubicado en la ruta del proyecto (C:\xampp\htdocs\blog)"
  
 1- Clonar proyecto desde GitKraken
 
