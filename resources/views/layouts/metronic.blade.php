@@ -42,7 +42,16 @@ License: You must have a valid license purchased only from themeforest(the above
         type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
     <!-- BEGIN PAGE LEVEL PLUGINS -->
-    <link href="../assets/global/plugins/jquery-notific8/jquery.notific8.min.css" rel="stylesheet" type="text/css" />
+
+
+    <link href="{{ asset('assets/global/plugins/jquery-notific8/jquery.notific8.min.css')}}" rel="stylesheet"
+        type="text/css" />
+
+    <link href="{{ asset('assets/global/plugins/select2/css/select2.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/global/plugins/select2/css/select2-bootstrap.min.css')}}" rel="stylesheet"
+        type="text/css" />
+
+
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN THEME GLOBAL STYLES -->
     <link href="{{ asset('assets/global/css/components-md.min.css')}}" rel="stylesheet" id="style_components"
@@ -2394,7 +2403,18 @@ License: You must have a valid license purchased only from themeforest(the above
             type="text/javascript"></script>
         <!-- END CORE PLUGINS -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <script src="{{ asset('assets/global/plugins/jquery-notific8/jquery.notific8.min.js')}}" type="text/javascript"></script>
+
+        <script src="{{ asset('assets/global/plugins/jquery-notific8/jquery.notific8.min.js')}}" type="text/javascript">
+        </script>
+
+        <script src="{{ asset('assets/global/plugins/select2/js/select2.full.min.js')}}" type="text/javascript"></script>
+        <script src="{{ asset('assets/global/plugins/jquery-validation/js/jquery.validate.min.js')}}" type="text/javascript">
+        </script>
+        <script src="{{ asset('assets/global/plugins/jquery-validation/js/additional-methods.min.js')}}" type="text/javascript">
+        </script>
+        <script src="{{ asset('assets/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js')}}" type="text/javascript">
+        </script>
+
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="{{ asset('assets/global/scripts/app.min.js')}}" type="text/javascript"></script>
