@@ -20,3 +20,5 @@ Route::get('/saludo/{name}/{nickname?}', 'WelcomeController');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('post', 'PostController');
+
+Route::resource('users', 'UserController');

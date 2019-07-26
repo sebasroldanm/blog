@@ -563,7 +563,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </li>
                             <li class="nav-item  ">
                                 <a href="ui_colors.html" class="nav-link ">
-                                    <span class="title">Tipos de Roles</span>
+                                    <span class="title">Tipos de Post</span>
                                 </a>
                                 {{-- </li>
                             <li class="nav-item  ">

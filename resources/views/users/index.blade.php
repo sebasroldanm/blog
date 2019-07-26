@@ -30,9 +30,10 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="btn-group">
-						<button id="sample_editable_1_new" class="btn green"> {{ __('Nuevo Usuario')}}
-							<i class="fa fa-plus"></i>
-						</button>
+						<a href=" {{ route('users.create')}} ">
+							<button id="sample_editable_1_new" class="btn green">{{ __('Nuevo Usuario')}}
+								<i class="fa fa-plus"></i>
+							</button></a>
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -58,28 +59,30 @@
 		<table class="table table-striped table-hover table-bordered" id="sample_editable_1">
 			<thead>
 				<tr>
-					<th> {{ __('Usuario')}} </th>
-					<th> {{ __('Nombre Completo')}} </th>
-					<th> {{ __('Puntos')}} </th>
-					<th> {{ __('Notas')}} </th>
+					<th> {{ __('Identificador')}} </th>
+					<th> {{ __('Nombre')}} </th>
+					<th> {{ __('Correo')}} </th>
+					<th> {{ __('Ultima Modificación')}} </th>
 					<th> {{ __('Editar')}} </th>
 					<th> {{ __('Eliminar')}} </th>
 				</tr>
 			</thead>
 			<tbody>
-				@forelse (array_combine($users, $names) as $user => $name)
+				@foreach ($users as $user)
+
 				<tr>
 					<td>
-						{{ $user }}
-
+						{{ $user->id }}
 					</td>
 					<td>
-						{{ $name}}
+						{{ $user->name }}
 					</td>
 					<td>
-						3
+						{{ $user->email }}
 					</td>
-					<td class="center"> Na. </td>
+					<td>
+						{{ $user->updated_at }}
+					</td>
 					<td>
 						<a class="edit" href="javascript:;"> {{ _('Editar')}} </a>
 					</td>
@@ -88,12 +91,10 @@
 					</td>
 				</tr>
 
-				@empty
-
-				No hay usuarios disponibles
-				@endforelse
+				@endforeach
 			</tbody>
 		</table>
+		{{ $users->links() }}
 	</div>
 </div>
 <!-- END EXAMPLE TABLE PORTLET-->

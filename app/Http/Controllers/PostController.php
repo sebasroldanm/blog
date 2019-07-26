@@ -14,7 +14,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('post.welcome');
+        $title = 'Post Publicados';
+        $posts = post::all();
+
+        return view('post.welcome', compact('title', 'posts'));
     }
 
     /**
