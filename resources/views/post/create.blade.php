@@ -1,12 +1,12 @@
 @extends('layouts.metronic')
 
-@section('title', "Nuevo Usuario")
+@section('title', "Nuevo Post")
 
 @section('url')
 <i class="fa fa-angle-right"></i>
-<a href=" {{ route('users.index')}} ">{{ __('Lista de Usuarios')}}</a>
+<a href=" {{ route('post.index')}} ">{{ __('Lista de Post')}}</a>
 <i class="fa fa-angle-right"></i>
-{{ __('Crear Nuevo Usuario')}}
+{{ __('Crear Nuevo Post')}}
 
 @endsection
 
@@ -33,16 +33,16 @@
     </div>
     <div class="portlet-body form">
         <!-- BEGIN FORM-->
-        <form method="POST" action="{{ route('users.store') }}" class="form-horizontal form-bordered">
+        <form method="POST" action="{{ route('post.store') }}" class="form-horizontal form-bordered">
             @csrf
             <div class="form-body">
                 <div class="form-group">
-                    <label class="control-label col-md-3">{{__('Nombres')}}</label>
+                    <label class="control-label col-md-3">{{__('Titulo')}}</label>
                     <div class="col-md-4">
-                        <input class="form-control @error('name') is-invalid @enderror" id="name" name="name"
-                            type="text" value="{{ old('name') }}" required autocomplete="name" />
-                        <span class="help-block"> {{__('Digitar nombre Completo')}} </span>
-                        @error('name')
+                        <input class="form-control @error('title') is-invalid @enderror" id="title" name="title"
+                            type="text" value="{{ old('title') }}" required autocomplete="title" />
+                        <span class="help-block"> {{__('Digitar titulo')}} </span>
+                        @error('title')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -50,9 +50,9 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-3">{{__('Correo Electrónico')}}</label>
+                    <label class="control-label col-md-3">{{__('Contenido')}}</label>
                     <div class="col-md-4">
-                        <input class="form-control @error('email') is-invalid @enderror" id="email" type="email"
+                        <input class="form-control @error('email') is-invalid @enderror" id="email" type="text"
                             name="email" value="{{ old('email') }}" required autocomplete="email" />
                         <span class="help-block"> {{ __('Usar un correo unico para esta cuenta')}} </span>
                         @error('email')
@@ -63,11 +63,11 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-3">{{ __('Contraseña') }}</label>
+                    <label class="control-label col-md-3">{{ __('Imagen') }}</label>
                     <div class="col-md-4">
                         <input class="form-control @error('password') is-invalid @enderror" id="password"
-                            type="password" name="password" required autocomplete="new-password" />
-                        <span class="help-block"> {{ __('Contraseña Unica e Intransferible')}} </span>
+                            type="text" name="password" required autocomplete="new-password" />
+                        <span class="help-block"> {{ __('Agregar una imagen')}} </span>
                         {{-- @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -76,11 +76,11 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-3">{{ __('Confirmar Contraseña') }}</label>
+                    <label class="control-label col-md-3">{{ __('Documento') }}</label>
                     <div class="col-md-4">
-                        <input class="form-control" id="password-confirm" type="password" name="password_confirmation"
+                        <input class="form-control" id="password-confirm" type="text" name="password_confirmation"
                             required autocomplete="new-password" />
-                        <span class="help-block"> {{ __('Repetir la Contraseña')}} </span>
+                        <span class="help-block"> {{ __('Agregar Documento')}} </span>
                     </div>
                 </div>
                 {{-- <div class="form-group">
@@ -124,8 +124,8 @@
                 <div class="row">
                     <div class="col-md-offset-3 col-md-9">
                         <button type="submit" class="btn purple">
-                            <i class="fa fa-check"></i> {{ __('Registrar Usuario') }}</button>
-                        <a href=" {{ route('users.index')}} "><button type="button"
+                            <i class="fa fa-check"></i> {{ __('Agregar Post') }}</button>
+                        <a href=" {{ route('post.index')}} "><button type="button"
                                 class="btn default">{{ __('Cancelar') }}</button></a>
                     </div>
                 </div>

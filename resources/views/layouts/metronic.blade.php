@@ -41,6 +41,9 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="{{ asset('assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css')}}" rel="stylesheet"
         type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <link href="../assets/global/plugins/jquery-notific8/jquery.notific8.min.css" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN THEME GLOBAL STYLES -->
     <link href="{{ asset('assets/global/css/components-md.min.css')}}" rel="stylesheet" id="style_components"
         type="text/css" />
@@ -52,7 +55,9 @@ License: You must have a valid license purchased only from themeforest(the above
         id="style_color" />
     <link href="{{ asset('assets/layouts/layout2/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
     <!-- END THEME LAYOUT STYLES -->
-    <link rel="shortcut icon" href="favicon.ico" />
+
+
+    <link rel="shortcut icon" href="{{ asset('favicon.ico')}}" />
 </head>
 <!-- END HEAD -->
 
@@ -2388,9 +2393,15 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="{{ asset('assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}"
             type="text/javascript"></script>
         <!-- END CORE PLUGINS -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script src="{{ asset('assets/global/plugins/jquery-notific8/jquery.notific8.min.js')}}" type="text/javascript"></script>
+        <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="{{ asset('assets/global/scripts/app.min.js')}}" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="{{ asset('assets/pages/scripts/ui-notific8.min.js')}}" type="text/javascript"></script>
+        <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <script src="{{ asset('assets/layouts/layout2/scripts/layout.min.js')}}" type="text/javascript"></script>
         <script src="{{ asset('assets/layouts/layout2/scripts/demo.min.js')}}" type="text/javascript"></script>

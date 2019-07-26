@@ -30,9 +30,12 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="btn-group">
-                        <button id="sample_editable_1_new" class="btn green"> {{ __('Nuevo Usuario')}}
-                            <i class="fa fa-plus"></i>
-                        </button>
+                        <a href=" {{ route('post.create')}} ">
+                            <button id="sample_editable_1_new" class="btn green">
+                                {{ __('Crear Nuevo Post')}}
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-6">

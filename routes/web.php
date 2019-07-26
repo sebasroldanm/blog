@@ -8,6 +8,10 @@ Route::get('/', function () {
 Route::get('/layout', function () {
     return view('layout');
 });
+
+Route::get('/notifi', function () {
+    return view('users.notifi');
+});
 Auth::routes();
 Route::get('/usuarios', 'UserController@index')->name('usuarios');
 

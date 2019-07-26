@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+use PhpParser\Node\Stmt\Return_;
 
 class PostController extends Controller
 {
@@ -17,7 +19,7 @@ class PostController extends Controller
         $title = 'Post Publicados';
         $posts = post::all();
 
-        return view('post.welcome', compact('title', 'posts'));
+        return view('post.index', compact('title', 'posts'));
     }
 
     /**
@@ -27,7 +29,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'Crear Post';
+
+        return view('post.create', compact('title'));
     }
 
     /**
@@ -38,7 +42,17 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+            'img' => 'required',
+        ]);
+
+        post::create($request->all());
+
+        Session::flash('message', 'Post creado con éxito');
+
+        return redirect()->route('post.index');
     }
 
     /**
