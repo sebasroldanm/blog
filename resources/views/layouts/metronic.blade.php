@@ -52,6 +52,26 @@ License: You must have a valid license purchased only from themeforest(the above
         type="text/css" />
 
 
+    {{-- Tipo Blog Form --}}
+
+    <link href="{{ asset('assets/global/plugins/select2/css/select2.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/global/plugins/select2/css/select2-bootstrap.min.css')}}" rel="stylesheet"
+        type="text/css" />
+    <link href="{{ asset('assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')}}"
+        rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css')}}" rel="stylesheet"
+        type="text/css" />
+    <link href="{{ asset('assets/global/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css')}}" rel="stylesheet"
+        type="text/css" />
+
+    {{-- Tipo Blog Form --}}
+
+    {{-- uploadfile --}}
+
+    <link href="{{ asset('assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css')}}" rel="stylesheet" type="text/css" />
+
+    {{-- uploadfile --}}
+
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN THEME GLOBAL STYLES -->
     <link href="{{ asset('assets/global/css/components-md.min.css')}}" rel="stylesheet" id="style_components"
@@ -2407,13 +2427,49 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="{{ asset('assets/global/plugins/jquery-notific8/jquery.notific8.min.js')}}" type="text/javascript">
         </script>
 
-        <script src="{{ asset('assets/global/plugins/select2/js/select2.full.min.js')}}" type="text/javascript"></script>
-        <script src="{{ asset('assets/global/plugins/jquery-validation/js/jquery.validate.min.js')}}" type="text/javascript">
+        <script src="{{ asset('assets/global/plugins/select2/js/select2.full.min.js')}}" type="text/javascript">
         </script>
-        <script src="{{ asset('assets/global/plugins/jquery-validation/js/additional-methods.min.js')}}" type="text/javascript">
+        <script src="{{ asset('assets/global/plugins/jquery-validation/js/jquery.validate.min.js')}}"
+            type="text/javascript">
         </script>
-        <script src="{{ asset('assets/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js')}}" type="text/javascript">
+        <script src="{{ asset('assets/global/plugins/jquery-validation/js/additional-methods.min.js')}}"
+            type="text/javascript">
         </script>
+        <script src="{{ asset('assets/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js')}}"
+            type="text/javascript">
+        </script>
+
+        {{-- form tipo blog --}}
+
+        <script src="{{ asset('assets/global/plugins/select2/js/select2.full.min.js')}}" type="text/javascript">
+        </script>
+        <script src="{{ asset('assets/global/plugins/jquery-validation/js/jquery.validate.min.js')}}"
+            type="text/javascript">
+        </script>
+        <script src="{{ asset('assets/global/plugins/jquery-validation/js/additional-methods.min.js')}}"
+            type="text/javascript">
+        </script>
+        <script src="{{ asset('assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"
+            type="text/javascript"></script>
+        <script src="{{ asset('assets/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js')}}" type="text/javascript">
+        </script>
+        <script src="{{ asset('assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js')}}"
+            type="text/javascript">
+        </script>
+        <script src="{{ asset('assets/global/plugins/ckeditor/ckeditor.js')}}" type="text/javascript"></script>
+        <script src="{{ asset('assets/global/plugins/bootstrap-markdown/lib/markdown.js')}}" type="text/javascript">
+        </script>
+        <script src="{{ asset('./assets/global/plugins/bootstrap-markdown/js/bootstrap-markdown.js')}}"
+            type="text/javascript">
+        </script>
+
+        {{-- form tipo blog --}}
+
+        {{-- uploadfile --}}
+
+        <script src="{{ asset('assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js')}}" type="text/javascript"></script>
+
+        {{-- uploadfile --}}
 
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
