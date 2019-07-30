@@ -63,7 +63,7 @@
                 <tr>
                     <th> {{ __('Identificador')}} </th>
                     <th> {{ __('Titulo Post')}} </th>
-                    <th> {{ __('Contenido')}} </th>
+                    {{-- <th> {{ __('Contenido')}} </th> --}}
                     <th> {{ __('Imagen')}} </th>
                     <th> {{ __('Archivo')}} </th>
                     <th> {{ __('Editar')}} </th>
@@ -80,9 +80,9 @@
                     <td>
                         {{ $post->title }}
                     </td>
-                    <td>
+                    {{-- <td>
                         {{ $post->content }}
-                    </td>
+                    </td> --}}
                     <td>
                         {{ $post->img }}
                     </td>
